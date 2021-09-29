@@ -1,1 +1,13 @@
+## Script
+```bash
+#include <stdio.h>
 
+void vuln(char *buff){
+	char buffer[64];
+	strcopy(buffer, buff);
+}
+
+void main(int argc, char **argv){
+	vuln(argv[1]);
+}
+```
