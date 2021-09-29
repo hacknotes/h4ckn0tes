@@ -23,27 +23,32 @@ void main(int argc, char **argv){
  ```
  ## GDB-Peda
  Vemos los registros de la memoria
+ 
  **Comando:** 
  ```bash
  i r
  ```
  Crea cadenas aleatorias
+ 
  **Comando:**
  ```bash
  pattern arg 100
  ```
  Ejecuta el binario
+ 
  **Comando:**
  ```bash
  r
  ```
  En base a la cadena creada anteriormente, busca el tamaño exacto de bites antes de sobreescribir el EIP.
  A ese numero es el que multiplicamos nuestras **"A"** y le sumamos 4 **"B"** que serían 4 bits.
+ 
  **Comando:**
  ```bash
  pattern search
  ```
  Ver los ultimos registros de la pila
+ 
  **Comando:**
  ```bash
  x/100wx $esp
