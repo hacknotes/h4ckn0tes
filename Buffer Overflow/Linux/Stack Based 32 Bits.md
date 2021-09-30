@@ -35,31 +35,36 @@ gcc -g -fno-stack-protector -z execstack -m32 buff.c -o buff
  ## GDB-Peda
 
 Vemos los registros de la memoria
+
 **Comando:** 
  ```bash
  i r
  ```
  
 Crea cadenas aleatorias
- **Comando:**
+
+**Comando:**
  ```bash
  pattern arg 100
  ```
  
  Ejecuta el binario
- **Comando:**
+
+**Comando:**
  ```bash
  r
  ```
  
 Encuentra el tamaño del offset.
- **Comando:**
+
+**Comando:**
  ```bash
  pattern search
  ```
  
  Ver los ultimos 100 registros de la pila.
- **Comando:**
+
+**Comando:**
  ```bash
  x/100wx $esp
  ```
