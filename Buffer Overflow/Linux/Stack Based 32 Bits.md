@@ -1,4 +1,4 @@
-**EXPLICACÍON DETALLADA EN** [Buffer Overflow 32 Bits Linux]()
+**EXPLICACÍON DETALLADA EN** [Buffer Overflow 32 Bits Linux](https://hacknotes.github.io/buffer%20overflow/buff32linux/)
 ## Script
 ```bash
 #include <stdio.h>
