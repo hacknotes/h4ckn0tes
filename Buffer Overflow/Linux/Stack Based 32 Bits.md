@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-## Compilacion
+## Compilación
 
  ```bash
 gcc -g -fno-stack-protector -z execstack -m32 buff.c -o buff
@@ -62,7 +62,7 @@ Encuentra el tamaño del offset.
  pattern search
  ```
  
- Ver los ultimos 100 registros de la pila.
+ Ver los últimos 100 registros de la pila.
 
 **Comando:**
  ```bash
