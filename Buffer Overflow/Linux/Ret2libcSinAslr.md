@@ -1,4 +1,4 @@
-**EXPLICACÍON DETALLADA EN** [Buffer Overflow 32 Bits Linux (sin ASLR)](https://hacknotes.github.io/buffer%20overflow/buff32linux/)
+**EXPLICACÍON DETALLADA EN** [Buffer Overflow 32 Bits Linux (sin ASLR)](https://hacknotes.github.io/buffer%20overflow/buff32linuxSinAslr/)
 
 ## Script
 ```bash
@@ -110,4 +110,4 @@ payload = junk + systemAdd + exitAdd + binshAdd
 print payload
 ```
 
-**EXPLICACÍON DETALLADA EN** [Buffer Overflow 32 Bits Linux (sin ASLR)](https://hacknotes.github.io/buffer%20overflow/buff32linux/)
+**EXPLICACÍON DETALLADA EN** [Buffer Overflow 32 Bits Linux (sin ASLR)](https://hacknotes.github.io/buffer%20overflow/buff32linuxSinAslr/)
