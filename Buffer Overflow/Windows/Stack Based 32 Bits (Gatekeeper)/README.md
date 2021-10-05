@@ -1,1 +1,1 @@
-**EXPLICACÍON DETALLADA EN** [Gatekeeper - Writeup - Tryhackme]()
+**EXPLICACÍON DETALLADA EN** [Gatekeeper - Writeup - Tryhackme](https://hacknotes.github.io/tryhackme/gatekeeper/)
