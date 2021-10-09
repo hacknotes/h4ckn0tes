@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+#Johnny Chafla | @jch | @hacknotes
+#site https://hacknotes.github.io/
 
 import socket, signal, sys, time
 from pwn import *
