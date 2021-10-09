@@ -1,4 +1,6 @@
 #!/usr/bin/python2
+#Johnny Chafla | @jch | @hacknotes
+#site https://hacknotes.github.io/
 
 import socket, sys
 
