@@ -94,6 +94,8 @@ Encuentra el tamaño del offset.
 ## Script en python
 ```python
 #/usr/bin/python2
+#Johnny Chafla | @jch | @hacknotes
+#site https://hacknotes.github.io/
 
 from struct import pack
 
