@@ -1,3 +1,3 @@
-```bash
+```python
 /etc/passwd
 ```
