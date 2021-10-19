@@ -1,4 +1,4 @@
-Servidor
+Servidor Web
 
 ```python
 IP = 10.10.10.14
