@@ -1,3 +1,3 @@
-```bash
+```sql
 C:\Windows\boot.ini
 ```
