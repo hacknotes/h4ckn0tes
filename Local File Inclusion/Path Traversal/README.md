@@ -1,4 +1,7 @@
 ```python
+
+EXPLICACIÓN DETALLADA EN [Path Traversal & Blacklists](httpa://hacknotes.github.io/vulnerabilidades/pathTraversal/).
+
 ../
 /../../
 ../../../../../
