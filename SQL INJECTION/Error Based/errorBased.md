@@ -1,4 +1,4 @@
-## Enumerando Columnas
+## Número Columnas
 ```sql
 ' ORDER BY 1-- -
 ' ORDER BY 100-- -
