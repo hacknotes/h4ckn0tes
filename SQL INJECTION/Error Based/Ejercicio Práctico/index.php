@@ -53,7 +53,11 @@
                                     autocomplete="off" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="address" class="form-control" placeholder="Ingresa direccion"
+                                <input type="password" name="password" class="form-control" placeholder="Contraseña"
+                                    autocomplete="off" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="address" class="form-control" placeholder="Ingresa dirección"
                                     autocomplete="off" required>
                             </div>
                             <div class="form-group">
@@ -70,7 +74,6 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Dirección</th>
                                 <th>Telefono</th>
@@ -85,7 +88,6 @@
                                         #Obtiene una fila de resultados como un array asociativo, numérico, o ambos
                             ?>
                             <tr>
-                                <td><?php echo $row['id'] ?></td>
                                 <td><?php echo $row['nombre'] ?></td>
                                 <td><?php echo $row['dirrecion'] ?></td>
                                 <td><?php echo $row['telefono'] ?></td>
