@@ -34,7 +34,6 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Dirección</th>
                                 <th>Telefono</th>
@@ -50,7 +49,7 @@
 				die("</table></div>".mysqli_error($conn));
 				}
                                 while($row = mysqli_fetch_array($result)){
-				  echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr>";
+				  echo "<tr><td>".$row[1]."</td><td>".$row[3]."</td><td>".$row[4]."</td></tr>";
   				}
 				}
 			    ?>
