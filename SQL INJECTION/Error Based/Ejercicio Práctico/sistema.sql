@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS datos
 ( 
     id int(10) not null,
     nombre varchar (25),
-	password varchar(25),
+    password varchar(25),
     direccion varchar(25),
     telefono varchar(15),
     PRIMARY KEY (id) 
