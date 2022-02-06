@@ -7,8 +7,8 @@
 
         if (mysqli_query($conn, $delete)){
             $_SESSION['message'] = 'Registro borrado exitosamente';
-            $_SESSION['message_type'] = 'danger'; # Funcion de bootstrap
-            header('Location:index.php'); # Redireccionar el archivo
+            $_SESSION['message_type'] = 'danger';
+            header('Location:index.php');
         }else{
             echo "Error al borrar registro: " . mysqli_error($conn);
         }
