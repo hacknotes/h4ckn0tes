@@ -89,7 +89,7 @@
                             ?>
                             <tr>
                                 <td><?php echo $row['nombre'] ?></td>
-                                <td><?php echo $row['dirrecion'] ?></td>
+                                <td><?php echo $row['direccion'] ?></td>
                                 <td><?php echo $row['telefono'] ?></td>
                                 <td>
                                     <a href="update.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
