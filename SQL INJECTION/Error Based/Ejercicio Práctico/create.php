@@ -7,7 +7,7 @@
         $address = $_POST['address'];
         $phone = $_POST['phone'];
 
-        $insert = "INSERT INTO datos (id,nombre,password,dirrecion,telefono)
+        $insert = "INSERT INTO datos (id,nombre,password,direccion,telefono)
         VALUES ('$id','$name','$password','$address','$phone')";
     
         if (mysqli_query($conn,$insert)){
