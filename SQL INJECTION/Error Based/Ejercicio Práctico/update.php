@@ -40,7 +40,7 @@
                     #Obtiene una fila de resultados como un array asociativo, numérico, o ambos
                     $id = $row['id'];
                     $name = $row['nombre'];
-                    $address = $row['dirrecion'];
+                    $address = $row['direccion'];
                     $phone = $row['telefono'];
                 }
             }
@@ -50,7 +50,7 @@
                 $address = $_POST['address'];
                 $phone = $_POST['phone'];
 
-                $update = "UPDATE datos set nombre = '$name', dirrecion ='$address', telefono = '$phone' WHERE id = $id";
+                $update = "UPDATE datos set nombre = '$name', direccion ='$address', telefono = '$phone' WHERE id = $id";
                 mysqli_query($conn, $update);
                 $_SESSION['message'] = 'Registro actualizado exitosamente';
                 $_SESSION['message_type'] = 'info'; # Función de bootstrap
@@ -64,20 +64,16 @@
                         <form name="form" action="update.php?id=<?php echo $_GET['id'];?>"
                             onsubmit="return validarform()" method="POST">
                             <div class="form-group">
-                                ID <input type="text" name="id" value="<?php echo $id; ?>" class="form-control"
-                                    placeholder="Actualiza ID" autocomplete="off" autofocus>
-                            </div>
-                            <div class="form-group">
                                 Nombre<input type="text" name="name" value="<?php echo $name; ?>" class="form-control"
-                                    placeholder="Actualiza Nombre" autocomplete="off" required>
+                                    class="form-control" placeholder="Actualiza Nombre" autocomplete="off" required>
                             </div>
                             <div class="form-group">
-                                Direccion<input type="text" name="address" value="<?php echo $address; ?>"
-                                    class="form-control" placeholder="Uptate ID" autocomplete="off" required>
+                                Dirección<input type="text" name="address" value="<?php echo $address; ?>"
+                                    class="form-control" placeholder="Actualizar dirección" autocomplete="off" required>
                             </div>
                             <div class="form-group">
-                                Telefono<input type="text" name="phone" value="<?php echo $phone; ?>"
-                                    class="form-control" placeholder="Uptate ID" autocomplete="off" required>
+                                Teléfono<input type="text" name="phone" value="<?php echo $phone; ?>"
+                                    class="form-control" placeholder="Actualizar teléfono" autocomplete="off" required>
                             </div>
                             <button class="btn btn-success btn-block" name="update">
                                 Actualizar
